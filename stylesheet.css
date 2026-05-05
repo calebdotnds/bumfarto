@@ -1,4 +1,37 @@
+body {
+    background-color: #191626;
+    color: white;
+}
 
-h1 {
-    color: blue;
+label {
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+
+}
+
+.title_bar {
+    grid-column: 2;
+    text-align: center;
+}
+
+.login_box {
+    display: block;
+    background-color: #261623;
+    border-width: 1;
+    border-color: goldenrod;
+    border-style: double;
+    grid-column: 2;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.login_msger {
+    display: none;
+    color: red;
 }

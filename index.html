@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8">
     <title>Bumfarto</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
-    <h1 id="top">WELCOME TO THE BUMFARTENING</h1>
-    <button type="button" onclick="test()">test</button>
+    <div id="content" class="container">
+        <div class="title_bar">
+            <h1 id="title">WELCOME TO THE BUMFARTENING</h1>
+        </div>
+        <form id="login" class="login_box">
+            <div>
+                <p id="login_msger"></p>
+            </div>
+            <div><label for="username">Username:</label></div>
+            <div><input type="text" id="username"></div>
+            <div><label for="password">Password:</label></div>
+            <div><input type="password" id="password" autocomplete="current-password"></div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>
