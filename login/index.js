@@ -11,9 +11,15 @@ document.getElementById("login").addEventListener("submit", function (e) {
         msger.style.display = "block"
         msger.style.color = "red"
     }
-    else {
+    else if (username) {
         change_title("Welcome " + username)
         document.getElementById("login").style.display = "none"
+    }
+    else {
+        msger = document.getElementById("login_msger")
+        msger.textContent = "Username or Password are incorect"
+        msger.style.display = "block"
+        msger.style.color = "red"
     }
 })
 
