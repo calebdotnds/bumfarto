@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bumfarto</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+</head>
+
+<body>
+    <div class="title_bar">
+        <img class="title_icon" src="../favicon.ico" alt="bumfarto.ico" onclick="window.location.href= '../'">
+        <h1 class="title">WELCOME TO THE BUMFARTENING</h1>
+        <button class="login_redirect" type="button" onclick="window.location.href= './login/'">Login</button>
+    </div>
+    <div id="content" class="container">
+        <form id="login" class="login_box">
+            <div>
+                <p id="login_msger"></p>
+            </div>
+            <div><label for="username">Username:</label></div>
+            <div><input type="text" id="username"></div>
+            <div><label for="password">Password:</label></div>
+            <div><input type="password" id="password" autocomplete="current-password"></div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

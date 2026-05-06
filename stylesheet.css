@@ -15,8 +15,44 @@ label {
 }
 
 .title_bar {
-    grid-column: 2;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    border-bottom-color: goldenrod;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 10px;
+}
+
+.title_icon {
+    grid-column: 1;
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+}
+
+.title {
+    grid-column: 3;
     text-align: center;
+}
+
+.login_redirect {
+    grid-column: 5;
+    background-color: purple;
+    color: white;
+    height: 75px;
+    border-radius: 30px;
+    border-color: goldenrod;
+}
+
+.dementia_box {
+    grid-column: 2;
+    display: grid;
+}
+
+.dementia_button {
+    grid-column: auto;
+    height: 75px;
+    width: 125px;
 }
 
 .login_box {
