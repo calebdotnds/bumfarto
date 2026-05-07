@@ -1,5 +1,5 @@
 body {
-    background-color: #191626;
+    background-color: rgb(19, 19, 19);
     color: white;
 }
 
@@ -11,38 +11,44 @@ label {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
-
 }
 
 .title_bar {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    border-bottom-color: goldenrod;
+    border-bottom-color: rgb(255, 78, 187);
     border-bottom-style: solid;
     border-bottom-width: 1px;
     padding: 10px;
 }
 
-.title_icon {
+.title_bar .title_icon {
     grid-column: 1;
     width: 75px;
     height: 75px;
     border-radius: 10px;
 }
 
-.title {
+.title_bar .title {
     grid-column: 3;
     text-align: center;
 }
 
-.login_redirect {
+.title_bar .login_redirect {
     grid-column: 5;
-    background-color: purple;
+    background-color: rgb(36, 36, 36);
     color: white;
     height: 75px;
     width: 125px;
     border-radius: 30px;
-    border-color: goldenrod;
+    border-color: rgb(255, 78, 187);
+    text-align: center;
+}
+
+.title_bar .login_redirect img {
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
 }
 
 .dementia_box {
@@ -58,17 +64,66 @@ label {
 
 .login_box {
     display: block;
-    background-color: #261623;
-    border-width: 1;
-    border-color: goldenrod;
+    background-color: rgb(36, 36, 36);
+    border-width: 3px;
+    border-color: rgb(255, 78, 187);
     border-style: double;
     grid-column: 2;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
+    width: 300px;
+    height: 300px;
+}
 
+.login_box div {
+    padding: 5px;
 }
 
 .login_msger {
     display: none;
     color: red;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 275px auto;
+}
+
+.dashboard .sidebar {
+    height: calc();
+    grid-column: 1;
+    grid-template-rows: 250px auto auto auto;
+    padding: 15px;
+    border-right-width: 1px;
+    border-right-color: rgb(255, 78, 187);
+    border-right-style: solid;
+}
+
+.dashboard .sidebar button {
+    width: 100%;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    border-color: rgb(255, 78, 187);
+    border-top-width: 1px;
+    border-right-style: none;
+    border-left-style: none;
+    padding: 5px;
+}
+
+.dashboard .sidebar .username {
+    text-align: center;
+}
+
+.dashboard .sidebar .pfp {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+}
+
+.dashboard .content {
+    height: calc();
+    grid-column: 2;
+    grid-template-rows: 250px auto auto auto;
+    padding: 15px;
+    text-align: center;
 }

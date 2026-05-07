@@ -11,19 +11,36 @@ document.getElementById("login").addEventListener("submit", function (e) {
         msger.style.display = "block"
         msger.style.color = "red"
     }
-    else if (username) {
-        change_title("Welcome " + username)
-        document.getElementById("login").style.display = "none"
-    }
     else {
-        msger = document.getElementById("login_msger")
-        msger.textContent = "Username or Password are incorect"
-        msger.style.display = "block"
-        msger.style.color = "red"
+        user_package = [true, "token"]; //this should = the return from server check
+        if (user_package[0]) {
+            pfp = "../favicon.ico" //query the server for user pfp
+            if (pfp) {
+                var reader = new FileReader();
+
+                reader.readAsDataURL(pfp)
+
+                reader.onload = async function (evt) {
+                    data = evt.target.result;
+                    localStorage.setItem("pfp", data)
+                }
+            }
+            localStorage.setItem("pfp", pfp)
+            localStorage.setItem("token", user_package[1])
+            localStorage.setItem("username", username)
+            window.location.href = "../dashboard"
+        }
+        else {
+            msger = document.getElementById("login_msger")
+            msger.textContent = "Username or Password is incorect"
+            msger.style.display = "block"
+            msger.style.color = "red"
+        }
     }
 })
 
-function change_title(title) {
-    let header = document.getElementById("title")
-    header.textContent = title
+window.onload = function () {
+    if (localStorage.getItem("token")) {
+        window.location.href = "../dashboard"
+    }
 }

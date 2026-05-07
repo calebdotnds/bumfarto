@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+</head>
+
+<body>
+    <div class="title_bar">
+        <img class="title_icon" src="../favicon.ico" alt="bumfarto.ico" onclick="window.location.href= '../home/'">
+        <h1 id="title" class="title">Bumfarto User Dashboard</h1>
+        <button id="login_redirect" class="login_redirect" type="button" onclick="window.location.href= '../dashboard'">
+            <img id="ico_pfp" src="../favicon.ico" alt="pfp">
+        </button>
+    </div>
+    <div class="dashboard">
+        <div class="sidebar">
+            <img id="pfp" class="pfp" src="../favicon.ico" alt="profile picture">
+            <h2 class="username" id="username">username</h2>
+            <button id="change_pfp" type="button" onclick="pfp_page()">Change Picture</button>
+            <button id="logout" type="button" onclick="logout()">Logout</button>
+        </div>
+        <div class="content">
+            <h2 id="content_title">Overview</h2>
+            <form id="pfp_changer" style="display: none;">
+                <input type="file" id="pfp_file_drop" accept=".png,.jpg,.ico,.webp,.gif">
+                <button type="submit" onclick="change_pfp()">Confirm</button>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
